@@ -1,0 +1,18 @@
+{
+    "error":false,
+    "force":false,
+    "alert":{
+        "code":200,
+        "message":"success"
+    },
+    "data":[
+        {
+            "title":"Gerhana Bulan Total",
+            "body":"Diprediksi akan terjadi gerhana bulan total pada malam ini pukul 20:00 WIB"
+        },
+        {
+            "title":"Film Gerhana The Movie",
+            "body":"Akan diadakan pemutaran film Gerhana The Movie pada malam ini pukul 19:00 WIB"
+        }
+    ]
+}

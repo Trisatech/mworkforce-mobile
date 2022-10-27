@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="menu_item_standby">@color/colorPrimaryDark</drawable>
+    <drawable name="menu_item_selected">@color/colorBlueDark</drawable>
+    <drawable name="bullet_indicator_standby">@drawable/bg_bullet_grey</drawable>
+    <drawable name="bullet_indicator_selected">@drawable/bg_bullet_green</drawable>
+</resources>

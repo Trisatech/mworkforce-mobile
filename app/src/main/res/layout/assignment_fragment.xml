@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/paddingM"
+                    android:paddingBottom="@dimen/paddingM">
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/btnCalendarView"
+                        android:layout_width="@dimen/searchBarHeight"
+                        android:layout_height="@dimen/searchBarHeight"
+                        android:layout_alignParentRight="true">
+                        <ImageView
+                            android:layout_width="@dimen/iconSizeM"
+                            android:layout_height="@dimen/iconSizeM"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_calendar_view_white" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_toLeftOf="@id/btnCalendarView"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="@dimen/marginM"
+                        android:layout_height="@dimen/searchBarHeight"
+                        android:background="@drawable/bg_home_search_bar">
+
+                        <ImageView
+                            android:id="@+id/icSearch"
+                            android:layout_width="@dimen/iconSizeSM"
+                            android:layout_height="@dimen/iconSizeSM"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/marginS"
+                            android:layout_marginRight="@dimen/marginS"
+                            android:src="@drawable/ic_search" />
+
+                        <EditText
+                            android:id="@+id/edtSearchAssignment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/marginM"
+                            android:layout_toRightOf="@id/icSearch"
+                            android:background="@color/colorNull"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hintSearchVisiting"
+                            android:imeOptions="actionSearch"
+                            android:singleLine="true"
+                            android:textColor="@color/colorWhite"
+                            android:textColorHint="@color/colorWhite"
+                            android:textSize="@dimen/fontL" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tabLayoutHeight">
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tabPortofolio"
+                        style="@style/MyCustomTabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/tabLayoutHeight"
+                        android:background="@color/colorWhite"
+                        app:tabGravity="fill"
+                        app:tabMaxWidth="0dp"
+                        app:tabMode="fixed" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/txtOngoingInvestment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/regular"
+                                android:text="Berjalan"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/fontL" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/txtDoneInvestment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/regular"
+                                android:text="Selesai"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="@dimen/fontL" />
+
+                        </RelativeLayout>
+
+                    </TableRow>
+
+                </RelativeLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewDashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorWhite" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/btnAddNew"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_margin="@dimen/marginM"-->
+        <!--android:clickable="true"-->
+        <!--android:src="@drawable/ic_add_white"-->
+        <!--app:backgroundTint="@color/colorGreen"-->
+        <!--app:fabSize="normal" />-->
+
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        android:visibility="gone"
+        android:layout_width="@dimen/iconSizeL"
+        android:layout_height="@dimen/iconSizeL"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

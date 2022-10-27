@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="visitItem"
+            type="com.radya.sfa.view.report.ReportDetailVisitHistoryDataBinding"/>
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginS"
+        android:layout_marginLeft="@dimen/marginM"
+        android:layout_marginRight="@dimen/marginM"
+        android:layout_marginTop="@dimen/marginS">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingS"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL"
+                        tools:text="Contact name"
+                        android:text="@{visitItem.customerName}"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontM"
+                        tools:text="Contact name"
+                        android:text="@{visitItem.startDate}"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontM"
+                        tools:text="Waktu google:"
+                        android:text="@{visitItem.waktuGoogle}"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/fontM"
+                        tools:text="Contact name"
+                        android:text="@{visitItem.invoiceAmount}"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/marginM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontM"
+                        tools:text="Contact name"
+                        android:text="@{visitItem.status}"/>
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontM"
+                        tools:text="Contact name"
+                        android:text="@{visitItem.endDate}"/>
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/fontM"
+                        tools:text="Contact name"
+                        android:text="@{visitItem.waktuTerbuarg}"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</layout>

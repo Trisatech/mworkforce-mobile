@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="paymentItem"
+            type="com.radya.sfa.view.invoice.payment.InvoicePaymentDataBinding" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginS"
+        android:layout_marginLeft="@dimen/marginM"
+        android:layout_marginRight="@dimen/marginM"
+        android:layout_marginTop="@dimen/marginS">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/paddingS"
+            android:paddingLeft="@dimen/paddingM"
+            android:paddingRight="@dimen/paddingM"
+            android:paddingTop="@dimen/paddingXS">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/fontL"
+                tools:text="@string/labelCash"
+                android:text="@{paymentItem.payment_type}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/fontL"
+                tools:text="Rp. 500.000"
+                android:text="@{paymentItem.amount}"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

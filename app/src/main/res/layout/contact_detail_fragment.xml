@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="contactDetail"
+            type="com.radya.sfa.view.contact.list.ContactListDataBinding"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:padding="@dimen/paddingXL">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/imgContactDetailSize"
+                    android:layout_height="@dimen/imgContactDetailSize"
+                    android:background="@drawable/bg_bullet_grey"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontXL"
+                    android:text="@{contactDetail.contact_name}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontL" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/colorWhite">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontL"
+                    android:layout_marginTop="@dimen/marginM"
+                    android:layout_marginLeft="@dimen/marginM"
+                    android:text="@string/labelOcupation" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginM"
+                    android:layout_marginRight="@dimen/marginM"
+                    android:layout_marginTop="@dimen/marginXS"
+                    android:layout_marginBottom="@dimen/marginXS">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/paddingS">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontM"
+                            android:text="@string/labelPosition" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bold"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontL"
+                            android:text="@{contactDetail.position}" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontL"
+                    android:layout_marginTop="@dimen/marginM"
+                    android:layout_marginLeft="@dimen/marginM"
+                    android:text="@string/labelPhoneNumber" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginM"
+                    android:layout_marginRight="@dimen/marginM"
+                    android:layout_marginTop="@dimen/marginXS"
+                    android:layout_marginBottom="@dimen/marginXS">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/paddingS">
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontM"
+                            android:text="@string/labelMainOffice" />
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bold"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontL"
+                            android:text="(021) 712345678" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontM"
+                            android:text="@string/labelMobilePhone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bold"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontL"
+                            android:text="@{contactDetail.contact_number}" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontL"
+                    android:layout_marginTop="@dimen/marginM"
+                    android:layout_marginLeft="@dimen/marginM"
+                    android:text="@string/labelEmailAddress" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginM"
+                    android:layout_marginRight="@dimen/marginM"
+                    android:layout_marginTop="@dimen/marginXS"
+                    android:layout_marginBottom="@dimen/marginM">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/paddingS">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontM"
+                            android:text="@string/labelPrimaryEmail" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bold"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontL"
+                            android:text="@{contactDetail.email}" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

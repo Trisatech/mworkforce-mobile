@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="taskCalendarItem"
+            type="com.radya.sfa.view.assignment.list.AssignmentListDataBinding"/>
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/paddingS"
+        android:layout_marginRight="@dimen/paddingS"
+        android:layout_marginTop="@dimen/paddingXS"
+        android:layout_marginBottom="@dimen/paddingXS"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingS"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/iconSizeS"
+                    android:layout_height="@dimen/iconSizeS"
+                    android:layout_marginRight="@dimen/marginXS"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_ticket_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontM"
+                    tools:text="12345"
+                    android:text="@{taskCalendarItem.taskCode}"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginS"
+                    android:layout_marginRight="@dimen/marginS"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="@dimen/fontM"
+                    android:text="|"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/colorGreyDark"
+                    android:textSize="@dimen/fontM"
+                    tools:text="Mobile Workforce"
+                    android:text="@{taskCalendarItem.taskName}"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="@dimen/fontM"
+                    tools:text="20/09/2018"
+                    android:text="@{taskCalendarItem.taskDate}"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginXS"
+                    android:layout_marginRight="@dimen/marginXS"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="@dimen/fontM"
+                    android:text="-"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="@dimen/fontM"
+                    tools:text="15.00"
+                    android:text="@{taskCalendarItem.taskTime}"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/fontM"
+                tools:text="Jl. Raya Rancaekek KM. 23"
+                android:text="@{taskCalendarItem.taskAddress}"/>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

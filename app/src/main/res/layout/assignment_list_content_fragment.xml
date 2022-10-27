@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listTaskOnProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/containerEmptyInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/marginXXXL">
+
+        <ImageView
+            android:layout_width="@dimen/emptyIconSize"
+            android:layout_height="@dimen/emptyIconSize"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_empty"/>
+
+        <TextView
+            android:id="@+id/txtEmptyInfo"
+            android:layout_marginTop="@dimen/marginS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/fontL"
+            android:text="Laporan tidak ditemukan" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/progressLoadingSize"
+        android:layout_height="@dimen/progressLoadingSize"
+        android:background="@color/colorNull"
+        android:indeterminate="true" />
+
+</RelativeLayout>

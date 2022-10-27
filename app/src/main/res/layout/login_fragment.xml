@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:id="@+id/containerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/btnForgotPassword"
+            android:layout_margin="@dimen/marginL"
+            android:paddingLeft="@dimen/paddingSM"
+            android:paddingRight="@dimen/paddingSM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontL"
+            android:text="@string/labelForgotPassword"
+            android:background="@drawable/bg_rounded_text"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_above="@id/containerButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/marginM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:text="@string/labelTitileLogin"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/fontXXXL" />
+
+        <LinearLayout
+            android:paddingLeft="@dimen/paddingM"
+            android:paddingRight="@dimen/paddingM"
+            android:layout_marginTop="@dimen/marginM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputFormNormalHeight"
+                android:background="@drawable/bg_input_field_grey_light">
+
+                <EditText
+                    android:id="@+id/edtEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorNull"
+                    android:fontFamily="@font/regular"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="@dimen/paddingM"
+                    android:paddingRight="@dimen/paddingM"
+                    android:singleLine="true"
+                    android:textColor="@color/colorGreyDark"
+                    android:textSize="@dimen/fontL"
+                    tools:text="ade.rifaldi@gmail.com"
+                    android:hint="@string/hintUserName"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/marginM"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputFormNormalHeight"
+                android:layout_marginBottom="@dimen/marginL"
+                android:background="@drawable/bg_input_field_grey_light">
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorNull"
+                    android:fontFamily="@font/regular"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:paddingLeft="@dimen/paddingM"
+                    android:paddingRight="@dimen/paddingM"
+                    android:singleLine="true"
+                    android:textColor="@color/colorGreyDark"
+                    android:textSize="@dimen/fontL"
+                    tools:text="1234567890"
+                    android:hint="@string/hintPassword"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnLogin"
+                android:layout_marginTop="@dimen/marginM"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btnNormalHeight"
+                android:background="@drawable/bg_btn_blue">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/labelBtnLogin"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontL" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        android:visibility="gone"
+        android:layout_width="@dimen/iconSizeL"
+        android:layout_height="@dimen/iconSizeL"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

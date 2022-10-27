@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="bankAcountItem"
+            type="com.radya.sfa.view.invoice.master.InvoiceBankDataBinding"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtCash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/light"
+            android:paddingTop="@dimen/paddingSM"
+            android:paddingBottom="@dimen/paddingSM"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/fontL"
+            tools:text="@string/labelCash"
+            android:text="@{bankAcountItem.bank_name}"/>
+
+    </LinearLayout>
+</layout>

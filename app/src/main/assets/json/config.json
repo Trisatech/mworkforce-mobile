@@ -1,0 +1,11 @@
+{
+    "error":false,
+    "force":false,
+    "alert":{
+        "code":200,
+        "message":"success"
+    },
+    "data":{
+        "update_location_interval":900000
+    }
+}

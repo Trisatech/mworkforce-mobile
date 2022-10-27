@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/marginM"
+        android:layout_marginRight="@dimen/marginM"
+        android:layout_marginBottom="@dimen/marginM"
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btnNormalHeight"
+        android:background="@drawable/bg_btn_green">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/bold"
+            android:text="@string/labelSave"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontL" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_above="@id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="@dimen/paddingM"
+            android:id="@+id/containerInput"
+            android:layout_marginTop="@dimen/marginS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/inputLiter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputFormNormalHeight"
+                android:layout_marginTop="@dimen/marginXS"
+                android:background="@drawable/bg_input_field_grey_light">
+
+                <EditText
+                    android:id="@+id/edtInputLiter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorNull"
+                    android:fontFamily="@font/regular"
+                    android:hint="@string/hintInputLiter"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/paddingM"
+                    android:paddingRight="@dimen/paddingM"
+                    android:singleLine="true"
+                    android:textColor="@color/colorGreyDark"
+                    android:textSize="@dimen/fontL" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputFormNormalHeight"
+                android:layout_marginTop="@dimen/marginS"
+                android:background="@drawable/bg_input_field_grey_light">
+
+                <EditText
+                    android:id="@+id/edtInputAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorNull"
+                    android:fontFamily="@font/regular"
+                    android:hint="@string/hintInputGasolineAmount"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/paddingM"
+                    android:paddingRight="@dimen/paddingM"
+                    android:singleLine="true"
+                    android:textColor="@color/colorGreyDark"
+                    android:textSize="@dimen/fontL" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/marginM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/regular"
+                android:text="@string/hintGasolineBill"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/fontL" />
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/marginS"
+                android:id="@+id/inputGasolineBill"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputFormExtraBigHeight"
+                android:background="@drawable/bg_input_field_grey_light">
+
+                <ImageView
+                    android:id="@+id/imgGasolineBill"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/marginS"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:id="@+id/addGasolineBillPhoto"
+                    android:padding="@dimen/paddingS"
+                    android:layout_width="@dimen/iconSizeXL"
+                    android:layout_height="@dimen/iconSizeXL"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_camera_grey_dark"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputFormHalfBigHeight"
+                android:layout_marginTop="@dimen/marginS"
+                android:background="@drawable/bg_input_field_grey_light">
+
+                <EditText
+                    android:id="@+id/edtSPBUAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorNull"
+                    android:fontFamily="@font/regular"
+                    android:gravity="top"
+                    android:paddingTop="@dimen/paddingS"
+                    android:hint="@string/hintSPBUAddress"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="@dimen/paddingM"
+                    android:paddingRight="@dimen/paddingM"
+                    android:textColor="@color/colorGreyDark"
+                    android:textSize="@dimen/fontL" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputFormNormalHeight"
+                android:layout_marginTop="@dimen/marginS"
+                android:background="@drawable/bg_input_field_grey_light">
+
+                <EditText
+                    android:id="@+id/edtNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorNull"
+                    android:fontFamily="@font/regular"
+                    android:hint="@string/hintNote"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/paddingM"
+                    android:paddingRight="@dimen/paddingM"
+                    android:singleLine="true"
+                    android:textColor="@color/colorGreyDark"
+                    android:textSize="@dimen/fontL" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        android:layout_width="@dimen/iconSizeL"
+        android:layout_height="@dimen/iconSizeL"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

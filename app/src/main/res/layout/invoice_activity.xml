@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/appbar_back" />
+
+    <RelativeLayout
+        android:id="@+id/containerIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/paddingSM">
+
+        <RelativeLayout
+            android:id="@+id/indicatorStep1"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/marginXXL"
+            android:layout_width="@dimen/iconSizeML"
+            android:layout_height="@dimen/iconSizeML"
+            android:background="@drawable/bg_bullet_green">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:layout_centerInParent="true"
+                android:text="1"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontL" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/indicatorStep2"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/iconSizeML"
+            android:layout_height="@dimen/iconSizeML"
+            android:background="@drawable/bg_bullet_grey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:layout_centerInParent="true"
+                android:text="2"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontL" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/indicatorStep3"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/marginXXL"
+            android:layout_width="@dimen/iconSizeML"
+            android:layout_height="@dimen/iconSizeML"
+            android:background="@drawable/bg_bullet_grey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:layout_centerInParent="true"
+                android:text="3"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontL" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_toLeftOf="@id/indicatorStep2"
+            android:layout_toRightOf="@id/indicatorStep1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorNull"
+            android:layout_centerVertical="true"/>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_toLeftOf="@id/indicatorStep3"
+            android:layout_toRightOf="@id/indicatorStep2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorNull"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/containerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <include
+                layout="@layout/button_prev_next"/>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/containerButton">
+            <FrameLayout
+                android:id="@+id/contentFrame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/progressLoading2"
+                android:visibility="gone"
+                android:layout_width="@dimen/iconSizeL"
+                android:layout_height="@dimen/iconSizeL"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

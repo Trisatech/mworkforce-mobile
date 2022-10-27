@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/marginM"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="@dimen/iconSizeL"
+            android:layout_height="@dimen/iconSizeL"
+            android:padding="@dimen/paddingS"
+            android:src="@drawable/ic_close_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dialog"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/paddingM"
+            android:paddingLeft="@dimen/paddingM"
+            android:paddingRight="@dimen/paddingM">
+
+            <TextView
+                android:id="@+id/txtDialogTitle"
+                android:layout_marginTop="@dimen/marginM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/bold"
+                android:text="@string/hintVerificationCode"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/fontXL" />
+
+            <LinearLayout
+                android:id="@+id/containerInput"
+                android:layout_marginTop="@dimen/marginS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtInputOTP"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintInputVerificationCode"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btnNormalHeight"
+                android:layout_marginTop="@dimen/marginM"
+                android:background="@drawable/bg_btn_green">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/labelSave"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontL" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        android:layout_width="@dimen/iconSizeL"
+        android:layout_height="@dimen/iconSizeL"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

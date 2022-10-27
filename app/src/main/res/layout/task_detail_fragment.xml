@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="taskDetail"
+            type="com.radya.sfa.view.assignment.detail.AssignmentDetailDataBinding" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/marginXS">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/paddingM"
+                            android:paddingLeft="@dimen/paddingM"
+                            android:paddingTop="@dimen/paddingXS">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/bold"
+                                    android:text="@{taskDetail.assignment_name}"
+                                    android:textColor="@color/colorGreyDark"
+                                    android:textSize="@dimen/fontXXL"
+                                    tools:text="Puja pramudya" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/iconSizeS"
+                                        android:layout_height="@dimen/iconSizeS"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginRight="@dimen/marginXS"
+                                        android:src="@drawable/ic_ticket_blue" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/regular"
+                                        android:text="@{taskDetail.assignment_code}"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="@dimen/fontL"
+                                        tools:text="12345" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:visibility="invisible"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:id="@+id/btnCall"
+                                    android:layout_width="@dimen/iconSizeL"
+                                    android:layout_height="@dimen/iconSizeL"
+                                    android:background="@drawable/bg_bullet_blue">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/iconSizeS"
+                                        android:layout_height="@dimen/iconSizeS"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_phone_white" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/btnChat"
+                                    android:layout_width="@dimen/iconSizeL"
+                                    android:layout_height="@dimen/iconSizeL"
+                                    android:layout_marginLeft="@dimen/marginSM"
+                                    android:background="@drawable/bg_bullet_blue">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/iconSizeS"
+                                        android:layout_height="@dimen/iconSizeS"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_chat_white" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_marginTop="@dimen/marginS"
+                            android:layout_marginBottom="@dimen/marginS"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/colorGrey"/>
+
+                        <RelativeLayout
+                            android:paddingLeft="@dimen/paddingM"
+                            android:paddingRight="@dimen/paddingM"
+                            android:paddingBottom="@dimen/paddingSM"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/iconSizeSM"
+                                    android:layout_height="@dimen/iconSizeSM"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_date_grey" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/marginXXS"
+                                    android:fontFamily="@font/regular"
+                                    android:text="@{taskDetail.assignment_start_time}"
+                                    android:textColor="@color/colorGrey"
+                                    android:textSize="@dimen/fontL"
+                                    tools:text="20/09/2018" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/iconSizeSM"
+                                    android:layout_height="@dimen/iconSizeSM"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/marginS"
+                                    android:src="@drawable/ic_time_grey" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/marginXXS"
+                                    android:fontFamily="@font/regular"
+                                    android:text="@{taskDetail.taskTime}"
+                                    android:textColor="@color/colorGrey"
+                                    android:textSize="@dimen/fontL"
+                                    tools:text="15.00" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/mapsContainerHeight">
+
+                            <fragment
+                                android:id="@+id/map"
+                                class="com.google.android.gms.maps.SupportMapFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <RelativeLayout
+                                android:id="@+id/btnDirection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="@dimen/marginS"
+                                android:background="@drawable/bg_btn_blue"
+                                android:paddingBottom="@dimen/paddingXS"
+                                android:paddingLeft="@dimen/paddingS"
+                                android:paddingRight="@dimen/paddingS"
+                                android:paddingTop="@dimen/paddingXS">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/regular"
+                                    android:text="Get Direction"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/fontM" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/paddingS"
+                    android:paddingLeft="@dimen/paddingM"
+                    android:paddingRight="@dimen/paddingM"
+                    android:paddingTop="@dimen/paddingS">
+
+                    <ImageView
+                        android:layout_width="@dimen/iconSizeM"
+                        android:layout_height="@dimen/iconSizeM"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/ic_location_grey_dark" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginXS"
+                        android:fontFamily="@font/regular"
+                        android:text="@{taskDetail.assignment_address}"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL"
+                        tools:text="Jl. Raya Rancaekek KM. 23" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="@dimen/marginXS"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorGrey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/paddingM"
+                    android:paddingRight="@dimen/paddingM">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginXS"
+                        android:fontFamily="@font/bold"
+                        android:text="Notes:"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontXL" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/marginS"
+                        android:layout_marginLeft="@dimen/marginXS"
+                        android:fontFamily="@font/regular"
+                        android:text="@{taskDetail.remarks}"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL"
+                        tools:text="Notes" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="92dp">
+
+                    <ImageView
+                        android:id="@+id/imgCaptured"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/imgAssignmentCapturedHeight"
+                        android:scaleType="centerInside"/>
+
+                    <android.support.v7.widget.CardView
+                        android:visibility="gone"
+                        android:id="@+id/addPicture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/marginS"
+                        android:layout_marginLeft="@dimen/marginM"
+                        android:layout_marginRight="@dimen/marginM"
+                        android:layout_marginTop="@dimen/marginS">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/paddingSM">
+
+                            <ImageView
+                                android:layout_width="@dimen/iconSizeM"
+                                android:layout_height="@dimen/iconSizeM"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_add_grey_dark" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/marginS"
+                                android:fontFamily="@font/regular"
+                                android:text="@string/labelAddPicture"
+                                android:textColor="@color/colorGreyDark"
+                                android:textSize="@dimen/fontL" />
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/marginM"
+                    android:layout_marginRight="@dimen/marginM"
+                    android:layout_marginTop="@dimen/marginS">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/paddingSM">
+
+                        <ImageView
+                            android:layout_width="@dimen/iconSizeM"
+                            android:layout_height="@dimen/iconSizeM"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_add_grey_dark" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/marginS"
+                            android:fontFamily="@font/regular"
+                            android:text="@string/labelAddSignature"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontL" />
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/containerButton"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:paddingLeft="@dimen/paddingM"
+            android:paddingRight="@dimen/paddingM"
+            android:layout_alignParentBottom="true">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/btnCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/marginM"
+                    android:layout_marginBottom="@dimen/marginM"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_red"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/labelBtnCancel"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btnStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_green"
+                    android:layout_marginBottom="@dimen/marginM"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/txtBtnStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/labelBtnStart"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/fontL" />
+
+                    <ProgressBar
+                        android:id="@+id/progressLoading"
+                        android:visibility="gone"
+                        android:layout_width="@dimen/iconSizeL"
+                        android:layout_height="@dimen/iconSizeL"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+            </TableRow>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

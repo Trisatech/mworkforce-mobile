@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/paddingM"
+            android:paddingRight="@dimen/paddingM"
+            android:paddingTop="@dimen/paddingS"
+            android:paddingBottom="@dimen/paddingS"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtAgentName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/fontXL"
+                        tools:text="Contact name"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontM"
+                        android:text="Kunjungan"/>
+
+
+                    <TextView
+                        android:id="@+id/txtTotalKunjungan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/fontXL"
+                        tools:text="8"
+                        android:layout_gravity="right"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TableRow
+                android:layout_marginTop="@dimen/marginS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/fontM"
+                            android:text="Mulai"/>
+
+
+                        <TextView
+                            android:id="@+id/txtStartTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontL"
+                            tools:text="2018/09/05"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/paddingS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/fontM"
+                            android:text="Waktu di toko"/>
+
+
+                        <TextView
+                            android:id="@+id/txtTotalWorkTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="@dimen/fontL"
+                            android:text="-"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/fontM"
+                            android:text="Selesai"/>
+
+
+                        <TextView
+                            android:id="@+id/txtEndTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontL"
+                            tools:text="2018/09/05"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/paddingS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/fontM"
+                            android:text="Waktu terbuang"/>
+
+
+                        <TextView
+                            android:id="@+id/txtTotalLossTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/fontL"
+                            android:text="-"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/fontM"
+                            android:text="Jam kerja"/>
+
+
+                        <TextView
+                            android:id="@+id/txtWaktuKerja"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontL"
+                            tools:text="2018/09/05"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/paddingS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/fontM"
+                            android:text="Tagihan"/>
+
+
+                        <TextView
+                            android:id="@+id/txtTagihan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/fontL"
+                            tools:text="3 Jam"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </TableRow>
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:layout_marginTop="@dimen/marginS"
+            android:layout_marginLeft="@dimen/marginM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/fontL"
+            android:text="Histori kunjungan"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        android:visibility="gone"
+        android:layout_width="@dimen/iconSizeL"
+        android:layout_height="@dimen/iconSizeL"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

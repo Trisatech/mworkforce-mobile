@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="sideMenuItem"
+            type="com.radya.sfa.view.sidemenu.SideMenuDataBinding"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/paddingM"
+        android:background="@{sideMenuItem.selected ? @drawable/menu_item_selected : @drawable/menu_item_standby}">
+
+        <ImageView
+            android:layout_width="@dimen/iconSizeM"
+            android:layout_height="@dimen/iconSizeM"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_launcher_round"
+            tools:imageUrl="@{sideMenuItem.id}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginS"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontL"
+            tools:text="Mobile Workforce"
+            android:text="@{sideMenuItem.menuName}"/>
+
+    </LinearLayout>
+
+</layout>

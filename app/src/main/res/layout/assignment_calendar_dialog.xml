@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/marginM"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="@dimen/iconSizeL"
+            android:layout_height="@dimen/iconSizeL"
+            android:padding="@dimen/paddingS"
+            android:src="@drawable/ic_close_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dialog"
+            android:paddingBottom="@dimen/paddingS"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:padding="@dimen/paddingS"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/fontXL"
+                tools:text="April 2018" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/paddingXS">
+
+                <com.github.sundeepk.compactcalendarview.CompactCalendarView
+                    android:id="@+id/compactCalendarView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="250dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    app:compactCalendarBackgroundColor="@color/colorWhite"
+                    app:compactCalendarCurrentDayBackgroundColor="@color/colorGreyLight"
+                    app:compactCalendarCurrentSelectedDayBackgroundColor="@color/colorPrimaryTransparent"
+                    app:compactCalendarMultiEventIndicatorColor="@color/colorWhite"
+                    app:compactCalendarTargetHeight="250dp"
+                    app:compactCalendarTextColor="@color/colorGreyDark"
+                    app:compactCalendarTextSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:paddingLeft="@dimen/paddingXS"
+                    android:paddingRight="@dimen/paddingXS"
+                    android:layout_marginLeft="@dimen/marginM"
+                    android:layout_marginBottom="@dimen/marginXS"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontM"
+                    android:background="@color/colorPrimary"
+                    tools:text="6 Apr 2018" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/listTask"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressLoading"
+                        android:layout_width="@dimen/progressLOadingSizeSmall"
+                        android:layout_height="@dimen/progressLOadingSizeSmall"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/marginXXL"
+                        android:background="@color/colorNull"
+                        android:indeterminate="true"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtEmptyTask"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:padding="@dimen/paddingL"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL"
+                        android:text="Tidak ada kunjungan" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

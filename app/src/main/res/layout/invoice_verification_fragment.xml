@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/containerInput"
+        android:layout_margin="@dimen/marginXXL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/fontL"
+            android:gravity="center"
+            android:text="@string/labelVerificationFakturInput" />
+
+        <EditText
+            android:id="@+id/edtVerificationCode"
+            android:layout_marginLeft="@dimen/marginM"
+            android:layout_marginRight="@dimen/marginM"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inputFormNormalHeight"
+            android:layout_marginTop="@dimen/marginM"
+            android:fontFamily="@font/bold"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:paddingLeft="@dimen/paddingM"
+            android:paddingRight="@dimen/paddingM"
+            android:singleLine="true"
+            android:gravity="center"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/fontXL" />
+
+
+        <RelativeLayout
+            android:id="@+id/btnSend"
+            android:layout_marginLeft="@dimen/marginM"
+            android:layout_marginRight="@dimen/marginM"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btnNormalHeight"
+            android:layout_marginTop="@dimen/marginL"
+            android:background="@drawable/bg_btn_blue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/bold"
+                android:text="@string/labelBtnSend"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontL" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/resendOTPRequest"
+            android:paddingTop="@dimen/paddingM"
+            android:paddingBottom="@dimen/paddingM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/fontL"
+            android:gravity="center"
+            android:text="@string/labelResendOTPRequest" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/containerSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <include
+            layout="@layout/invoice_payment_success"/>
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        android:visibility="gone"
+        android:layout_width="@dimen/iconSizeL"
+        android:layout_height="@dimen/iconSizeL"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/skipVerification"
+        android:layout_width="wrap_content"
+        android:paddingLeft="@dimen/paddingM"
+        android:layout_height="@dimen/btnNormalHeight"
+        android:paddingRight="@dimen/paddingM"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/colorGreen"
+        android:textSize="@dimen/fontL"
+        android:gravity="center"
+        android:text="@string/labelSkipVerification" />
+
+
+</RelativeLayout>

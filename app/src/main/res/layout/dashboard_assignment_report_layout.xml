@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:padding="@dimen/paddingM"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/fontM"
+                android:text="@string/labelNowAssignment" />
+
+            <TextView
+                android:id="@+id/txtCurrentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/fontXXL"
+                tools:text="Kamis, 24 Feb 2018" />
+
+            <TableRow
+                android:layout_marginTop="@dimen/marginM"
+                android:layout_marginBottom="@dimen/marginS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/containerAssignmentTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginS"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/paddingS">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerInParent="true">
+                            <TextView
+                                android:id="@+id/txtAssignmentTotal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bold"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/fontXXXL"
+                                android:text="-" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/colorGreyDark"
+                                android:textSize="@dimen/fontM"
+                                android:text="Kunjungan" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/containerAssignmentSuccess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginS"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/paddingS">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerInParent="true">
+                            <TextView
+                                android:id="@+id/txtAssignmentSuccess"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bold"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/colorGreen"
+                                android:textSize="@dimen/fontXXXL"
+                                android:text="-" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/colorGreyDark"
+                                android:textSize="@dimen/fontM"
+                                android:text="Sukses" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/containerAssignmentFailed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginS"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/paddingS">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerInParent="true">
+                            <TextView
+                                android:id="@+id/txtAssignmentFailed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bold"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/colorRed"
+                                android:textSize="@dimen/fontXXXL"
+                                android:text="-" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/colorGreyDark"
+                                android:textSize="@dimen/fontM"
+                                android:text="Gagal" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </TableRow>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/containerAssignmentOnGoing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginS"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/paddingSM"
+                    android:paddingBottom="@dimen/paddingSM"
+                    android:paddingLeft="@dimen/paddingM"
+                    android:background="@color/colorPrimary">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtAssignmentOnGoing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/fontL"
+                            android:text="-" />
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/marginS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/fontL"
+                            android:text="Masih dalam proses" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/iconSizeS"
+                        android:layout_height="@dimen/iconSizeS"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/marginM"
+                        android:src="@drawable/ic_arrow_right"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <TableRow
+                android:layout_marginTop="@dimen/marginM"
+                android:id="@+id/containerWorkTimeNotSPV"
+                android:layout_marginBottom="@dimen/marginS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginS"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/paddingM">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerInParent="true">
+                            <TextView
+                                android:id="@+id/txtWorkTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bold"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/colorGreen"
+                                android:textSize="@dimen/fontXXXL"
+                                android:text="-" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/colorGreyDark"
+                                android:textSize="@dimen/fontM"
+                                android:text="Waktu kerja" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginS"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/paddingM">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerInParent="true">
+                            <TextView
+                                android:id="@+id/txtLostTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bold"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/colorRed"
+                                android:textSize="@dimen/fontXXXL"
+                                android:text="-" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/colorGreyDark"
+                                android:textSize="@dimen/fontM"
+                                android:text="Waktu terbuang" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </TableRow>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/containerWorkTimeAgent"
+                android:layout_marginTop="@dimen/marginM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtAgentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontL"
+                    tools:text="Laporan kerja agen: TRL" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginS"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingTop="@dimen/paddingS"
+                        android:paddingBottom="@dimen/paddingS"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_centerVertical="true">
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/colorGreyDark"
+                                android:textSize="@dimen/fontL"
+                                android:text="Waktu kerja" />
+
+                            <TextView
+                                android:id="@+id/txtWorkTimeAgent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bold"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/colorGreen"
+                                android:textSize="@dimen/fontL"
+                                android:text="-" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/marginS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_centerVertical="true">
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/colorGreyDark"
+                                android:textSize="@dimen/fontL"
+                                android:text="Waktu terbuang" />
+
+                            <TextView
+                                android:id="@+id/txtLostTimeAgent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bold"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/colorRed"
+                                android:textSize="@dimen/fontL"
+                                android:text="-" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/seeAllAssignment"
+            android:layout_marginTop="@dimen/marginXS"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/paddingS"
+            android:paddingRight="@dimen/paddingS"
+            android:paddingTop="@dimen/paddingXXS"
+            android:paddingBottom="@dimen/paddingXXS">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/fontM"
+                android:text="@string/labelSeeAll" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

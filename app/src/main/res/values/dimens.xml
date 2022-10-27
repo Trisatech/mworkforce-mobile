@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="iconSizeXXS">8dp</dimen>
+    <dimen name="iconSizeXS">12dp</dimen>
+    <dimen name="iconSizeS">16dp</dimen>
+    <dimen name="iconSizeSM">20dp</dimen>
+    <dimen name="iconSizeM">24dp</dimen>
+    <dimen name="iconSizeML">30dp</dimen>
+    <dimen name="iconSizeL">36dp</dimen>
+    <dimen name="iconSizeXL">48dp</dimen>
+    <dimen name="iconSizeXXL">56dp</dimen>
+
+    <dimen name="paddingXXS">2dp</dimen>
+    <dimen name="paddingXS">4dp</dimen>
+    <dimen name="paddingS">8dp</dimen>
+    <dimen name="paddingSM">12dp</dimen>
+    <dimen name="paddingM">16dp</dimen>
+    <dimen name="paddingL">24dp</dimen>
+    <dimen name="paddingXL">36dp</dimen>
+    <dimen name="paddingXXL">48dp</dimen>
+
+    <dimen name="marginXXS">2dp</dimen>
+    <dimen name="marginXS">4dp</dimen>
+    <dimen name="marginS">8dp</dimen>
+    <dimen name="marginSM">12dp</dimen>
+    <dimen name="marginM">16dp</dimen>
+    <dimen name="marginL">24dp</dimen>
+    <dimen name="marginXL">36dp</dimen>
+    <dimen name="marginXXL">48dp</dimen>
+    <dimen name="marginXXXL">124dp</dimen>
+
+    <dimen name="fontXXS">8sp</dimen>
+    <dimen name="fontXS">10sp</dimen>
+    <dimen name="fontS">12sp</dimen>
+    <dimen name="fontM">14sp</dimen>
+    <dimen name="fontL">16sp</dimen>
+    <dimen name="fontXL">18sp</dimen>
+    <dimen name="fontXXL">20sp</dimen>
+    <dimen name="fontXXXL">24sp</dimen>
+
+    <dimen name="sideMenuHeaderHeight">140dp</dimen>
+    <dimen name="imgProfileSideMenuSize">64dp</dimen>
+    <dimen name="appBarHeight">56dp</dimen>
+    <dimen name="tabLayoutHeight">48dp</dimen>
+    <dimen name="searchBarHeight">48dp</dimen>
+    <dimen name="btnNormalHeight">50dp</dimen>
+    <dimen name="progressLoadingSize">36dp</dimen>
+    <dimen name="progressLOadingSizeSmall">24dp</dimen>
+    <dimen name="mapsContainerHeight">200dp</dimen>
+    <dimen name="inputFormNormalHeight">48dp</dimen>
+    <dimen name="inputFormMediumHeight">64dp</dimen>
+    <dimen name="inputFormHalfBigHeight">92dp</dimen>
+    <dimen name="imgContactItemSize">56dp</dimen>
+    <dimen name="imgContactDetailSize">100dp</dimen>
+    <dimen name="imgAssignmentCapturedHeight">200dp</dimen>
+    <dimen name="emptyIconSize">56dp</dimen>
+    <dimen name="btnPrevNextHeight">64dp</dimen>
+    <dimen name="inputFormBigHeight">140dp</dimen>
+    <dimen name="inputFormExtraBigHeight">200dp</dimen>
+    <dimen name="indicatorOnboardingSize">6dp</dimen>
+</resources>

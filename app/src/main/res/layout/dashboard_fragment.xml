@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="@dimen/marginM"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@color/colorGreyLight"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/marginM"
+            android:id="@+id/txtInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/fontXXL"
+            tools:text="Kamu belum absen untuk hari ini" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnCheckIn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btnNormalHeight"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/marginM"
+        android:background="@drawable/bg_btn_green">
+
+        <TextView
+            android:id="@+id/txtBtnCheckIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/bold"
+            tools:text="Mulai bekerja"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontXL" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnCheckIn">
+        <FrameLayout
+            android:id="@+id/containerAssignmentReport"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                layout="@layout/dashboard_assignment_report_layout"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/containerNews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                layout="@layout/dashboard_news_layout"/>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressLoading"
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/progressLoadingSize"
+        android:layout_height="@dimen/progressLoadingSize"
+        android:background="@color/colorNull"
+        android:indeterminate="true" />
+
+
+</RelativeLayout>

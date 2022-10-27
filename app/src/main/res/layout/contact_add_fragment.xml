@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/containerBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btnNormalHeight"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/marginM"
+            android:layout_marginLeft="@dimen/marginM"
+            android:layout_marginRight="@dimen/marginM"
+            android:background="@drawable/bg_btn_green">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/bold"
+                android:text="@string/labelSave"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontL" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btnAdd">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/paddingM">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/labelStoreData"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontXL" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtStoreName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintStoreName"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormHalfBigHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtStoreAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:gravity="top"
+                        android:hint="@string/hintAdress"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:paddingTop="@dimen/paddingS"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtKelurahan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintKelurahan"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtKecamatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintKecamatan"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtKabupaten"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintKabupaten"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginM"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <TextView
+                        android:id="@+id/txtStoreStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hintStoreStatus"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                    <ImageView
+                        android:id="@+id/icStatus"
+                        android:layout_width="@dimen/iconSizeML"
+                        android:layout_height="@dimen/iconSizeML"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/marginS"
+                        android:src="@drawable/ic_arrow_down_grey" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <TextView
+                        android:id="@+id/txtStoreType"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hintStoreType"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                    <ImageView
+                        android:id="@+id/icType"
+                        android:layout_width="@dimen/iconSizeML"
+                        android:layout_height="@dimen/iconSizeML"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/marginS"
+                        android:src="@drawable/ic_arrow_down_grey" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtYearOfStore"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintYearOfStore"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtBannerStore"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintBannerStore"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtLebarJalan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:gravity="top"
+                        android:hint="@string/hintLebarJalan"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:paddingTop="@dimen/paddingS"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormBigHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtStoreNote"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:gravity="top"
+                        android:hint="@string/hintNoteStore"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:paddingTop="@dimen/paddingS"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/labelStorePhoto"
+                    android:textColor="@color/colorGreyDark"
+                    android:textSize="@dimen/fontL" />
+
+                <RelativeLayout
+                    android:id="@+id/storePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormExtraBigHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <ImageView
+                        android:id="@+id/imgStorePhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/marginS"
+                        android:scaleType="centerInside" />
+
+                    <ImageView
+                        android:id="@+id/addPhotoStore"
+                        android:layout_width="@dimen/iconSizeXL"
+                        android:layout_height="@dimen/iconSizeXL"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/paddingS"
+                        android:src="@drawable/ic_camera_grey_dark" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/labelBannerStorePhoto"
+                    android:textColor="@color/colorGreyDark"
+                    android:textSize="@dimen/fontL" />
+
+                <RelativeLayout
+                    android:id="@+id/storeBannerPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormExtraBigHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <ImageView
+                        android:id="@+id/imgBannerStorePhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/marginS"
+                        android:scaleType="centerInside" />
+
+                    <ImageView
+                        android:id="@+id/addBannerPhotoStore"
+                        android:layout_width="@dimen/iconSizeXL"
+                        android:layout_height="@dimen/iconSizeXL"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/paddingS"
+                        android:src="@drawable/ic_camera_grey_dark" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginM"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/labelOwnerData"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontXL" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtOwnerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintOwnerName"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtOwnerPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintOwnerPhone"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormHalfBigHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtOwnerAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:gravity="top"
+                        android:hint="@string/hintOwnerAdress"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:paddingTop="@dimen/paddingS"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtOwnerKelurahan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintKelurahan"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtOwnerKecamatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintKecamatan"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtOwnerKabupaten"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintKabupaten"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginM"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/labelPenanggungJawabData"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontXL" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtPenanggungJawabName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintPenanggungJawabName"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtPenanggungJawabPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintPenanggungJawabPhone"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginM"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/labelIdentitasPajak"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontXL" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtKTP"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintKTPNumber"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ktpPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormBigHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <ImageView
+                        android:id="@+id/imgKTPPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/marginS"
+                        android:scaleType="centerInside" />
+
+                    <ImageView
+                        android:id="@+id/addKTPPhoto"
+                        android:layout_width="@dimen/iconSizeXL"
+                        android:layout_height="@dimen/iconSizeXL"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/paddingS"
+                        android:src="@drawable/ic_camera_grey_dark" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormNormalHeight"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <EditText
+                        android:id="@+id/edtNPWP"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorNull"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/hintNPWPNumber"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/paddingM"
+                        android:paddingRight="@dimen/paddingM"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontL" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/npwpPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputFormBigHeight"
+                    android:layout_marginBottom="@dimen/marginS"
+                    android:layout_marginTop="@dimen/marginS"
+                    android:background="@drawable/bg_input_field_grey_light">
+
+                    <ImageView
+                        android:id="@+id/imgNPWPPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/marginS"
+                        android:scaleType="centerInside" />
+
+                    <ImageView
+                        android:id="@+id/addNPWPPhoto"
+                        android:layout_width="@dimen/iconSizeXL"
+                        android:layout_height="@dimen/iconSizeXL"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/paddingS"
+                        android:src="@drawable/ic_camera_grey_dark" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/containerSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/iconSizeXL"
+                android:layout_height="@dimen/iconSizeXL"
+                android:background="@drawable/bullet_indicator_selected">
+
+                <ImageView
+                    android:layout_width="@dimen/iconSizeM"
+                    android:layout_height="@dimen/iconSizeM"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_check_white"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:paddingTop="@dimen/paddingS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/fontL"
+                android:gravity="center"
+                android:text="@string/labelSuccessAddStore" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        android:visibility="gone"
+        android:layout_width="@dimen/iconSizeL"
+        android:layout_height="@dimen/iconSizeL"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

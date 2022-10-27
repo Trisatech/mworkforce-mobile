@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/marginM"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="@dimen/iconSizeL"
+            android:layout_height="@dimen/iconSizeL"
+            android:padding="@dimen/paddingS"
+            android:src="@drawable/ic_close_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dialog"
+            android:orientation="vertical"
+            android:padding="@dimen/paddingM">
+
+            <TextView
+                android:id="@+id/txtEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/light"
+                android:paddingBottom="@dimen/paddingSM"
+                android:paddingTop="@dimen/paddingSM"
+                android:text="@string/labelEdit"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/fontL" />
+
+            <TextView
+                android:id="@+id/txtDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/light"
+                android:paddingBottom="@dimen/paddingSM"
+                android:paddingTop="@dimen/paddingSM"
+                android:text="@string/labelDelete"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/fontL" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        android:layout_width="@dimen/iconSizeL"
+        android:layout_height="@dimen/iconSizeL"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

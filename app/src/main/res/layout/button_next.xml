@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/btnPrevNextHeight"
+    android:paddingLeft="@dimen/paddingM"
+    android:paddingRight="@dimen/paddingM"
+    android:background="@color/colorWhite"
+    android:layout_alignParentBottom="true">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/btnPrev"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/marginM"
+            android:layout_marginBottom="@dimen/marginM"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_grey_dark"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/regular"
+                android:text="@string/labelBtnPrevious"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontL" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_blue"
+            android:layout_marginBottom="@dimen/marginM"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/txtBtnStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/bold"
+                android:text="@string/labelBtnNext"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontL" />
+
+            <ProgressBar
+                android:id="@+id/progressLoading"
+                android:visibility="gone"
+                android:layout_width="@dimen/iconSizeL"
+                android:layout_height="@dimen/iconSizeL"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </TableRow>
+
+
+</RelativeLayout>

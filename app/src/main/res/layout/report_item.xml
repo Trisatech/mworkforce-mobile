@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="reportItem"
+            type="com.radya.sfa.view.report.ReportListDataBinding" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginS"
+        android:layout_marginLeft="@dimen/marginM"
+        android:layout_marginRight="@dimen/marginM"
+        android:layout_marginTop="@dimen/marginS">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/paddingM"
+            android:paddingRight="@dimen/paddingM"
+            android:paddingTop="@dimen/paddingS"
+            android:paddingBottom="@dimen/paddingS"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/fontXL"
+                        tools:text="Contact name"
+                        android:text="@{reportItem.name}"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontM"
+                        android:text="Kunjungan"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/fontXL"
+                        tools:text="8"
+                        android:layout_gravity="right"
+                        android:text="@{reportItem.totalTask}"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TableRow
+                android:layout_marginTop="@dimen/marginS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/fontM"
+                            android:text="Mulai"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontL"
+                            tools:text="2018/09/05"
+                            android:text="@{reportItem.startTime}"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/paddingS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/fontM"
+                            android:text="Waktu di toko"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="@dimen/fontL"
+                            tools:text="5 Jam"
+                            android:text="@{reportItem.totalWorkInStore}"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/fontM"
+                            android:text="Selesai"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontL"
+                            tools:text="2018/09/05"
+                            android:text="@{reportItem.endTime}"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/paddingS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/fontM"
+                            android:text="Waktu terbuang"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/fontL"
+                            tools:text="3 Jam"
+                            android:text="@{reportItem.totalLossTime}"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/fontM"
+                            android:text="Jam kerja"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/fontL"
+                            tools:text="2018/09/05"
+                            android:text="@{reportItem.totalWorkTime}"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/paddingS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/fontM"
+                            android:text="Tagihan"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/fontL"
+                            tools:text="3 Jam"
+                            android:text="@{reportItem.totalInvoice}"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </TableRow>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

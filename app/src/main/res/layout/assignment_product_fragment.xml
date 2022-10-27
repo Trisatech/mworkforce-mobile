@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/marginS"
+        android:id="@+id/listInvoiceType"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/marginM"
+        android:id="@+id/btnDone"
+        android:layout_marginTop="@dimen/marginM"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btnNormalHeight"
+        android:background="@drawable/bg_btn_green">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/bold"
+            android:text="@string/labelBtnDone"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontL" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        android:visibility="gone"
+        android:layout_width="@dimen/iconSizeL"
+        android:layout_height="@dimen/iconSizeL"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

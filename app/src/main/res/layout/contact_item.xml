@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="contactItem"
+            type="com.radya.sfa.view.contact.list.ContactListDataBinding" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginS"
+        android:layout_marginLeft="@dimen/marginM"
+        android:layout_marginRight="@dimen/marginM"
+        android:layout_marginTop="@dimen/marginS">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/paddingM"
+            android:paddingRight="@dimen/paddingM"
+            android:paddingTop="@dimen/paddingS"
+            android:paddingBottom="@dimen/paddingS">
+
+            <ImageView
+                android:layout_width="@dimen/imgContactItemSize"
+                android:layout_height="@dimen/imgContactItemSize"
+                android:background="@drawable/bg_bullet_grey"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginSM"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontL"
+                    tools:text="Contact name"
+                    android:text="@{contactItem.contact_name}"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/iconSizeXS"
+                        android:layout_height="@dimen/iconSizeXS"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_phone_grey_dark"/>
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/marginXS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/colorGreyDark"
+                        android:textSize="@dimen/fontM"
+                        tools:text="Number"
+                        android:text="@{contactItem.contact_number}"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/colorGreyDark"
+                    android:textSize="@dimen/fontS"
+                    tools:text="Remarks"
+                    android:text="@{contactItem.remarks}"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>
