@@ -1,6 +1,7 @@
 package com.radya.sfa.view.invoice.faktur;
 
-import android.databinding.BaseObservable;
+
+import androidx.databinding.BaseObservable;
 
 import com.radya.sfa.util.AppUtils;
 import com.radya.sfa.util.StringUtils;

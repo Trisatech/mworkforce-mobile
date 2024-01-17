@@ -35,7 +35,7 @@
                 android:layout_marginBottom="@dimen/marginS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/containerAssignmentTotal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -70,9 +70,9 @@
 
                         </LinearLayout>
                     </RelativeLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/containerAssignmentSuccess"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -107,9 +107,9 @@
 
                         </LinearLayout>
                     </RelativeLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/containerAssignmentFailed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -144,10 +144,10 @@
 
                         </LinearLayout>
                     </RelativeLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
             </TableRow>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/containerAssignmentOnGoing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -192,7 +192,7 @@
                         android:layout_marginRight="@dimen/marginM"
                         android:src="@drawable/ic_arrow_right"/>
                 </RelativeLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <TableRow
                 android:layout_marginTop="@dimen/marginM"
@@ -201,7 +201,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/marginS"
@@ -235,9 +235,9 @@
 
                         </LinearLayout>
                     </RelativeLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/marginS"
@@ -271,7 +271,7 @@
 
                         </LinearLayout>
                     </RelativeLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
             </TableRow>
 
 
@@ -291,7 +291,7 @@
                     android:textSize="@dimen/fontL"
                     tools:text="Laporan kerja agen: TRL" />
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/marginS"
@@ -355,7 +355,7 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 

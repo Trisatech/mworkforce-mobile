@@ -1,18 +1,9 @@
 package com.radya.sfa.view.settings;
 
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +12,15 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.JsonObject;
 import com.radya.sfa.Constant;
@@ -32,26 +32,20 @@ import com.radya.sfa.data.source.remote.ApiResponse;
 import com.radya.sfa.data.source.remote.BaseModel;
 import com.radya.sfa.data.source.sync.Sync;
 import com.radya.sfa.data.source.sync.SyncManager;
-import com.radya.sfa.util.AppUtils;
 import com.radya.sfa.util.Base64Utils;
-import com.radya.sfa.util.DateUtils;
 import com.radya.sfa.util.ImageUtils;
 import com.radya.sfa.util.IntentUtils;
 import com.radya.sfa.util.JsonObjectUtils;
 import com.radya.sfa.util.JsonUtils;
 import com.radya.sfa.util.NetworkUtils;
-import com.radya.sfa.util.ToastUtils;
 import com.radya.sfa.view.ListView;
 import com.radya.sfa.view.assignment.AssignmentViewModel;
-import com.radya.sfa.view.assignment.product.AssignmentProductActivity;
 import com.radya.sfa.view.auth.AuthActivity;
 import com.radya.sfa.view.auth.AuthViewModel;
-import com.radya.sfa.view.invoice.InvoiceActivity;
 import com.radya.sfa.view.invoice.InvoiceViewModel;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;

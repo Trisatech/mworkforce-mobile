@@ -1,7 +1,8 @@
 package com.radya.sfa.data.source.remote;
 
-import android.arch.lifecycle.MutableLiveData;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.MutableLiveData;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -10,7 +11,6 @@ import com.radya.sfa.Constant;
 import com.radya.sfa.data.source.cache.CacheManager;
 import com.radya.sfa.util.ToastUtils;
 import com.radya.sfa.view.assignment.list.AssignmentAll;
-import com.radya.sfa.view.assignment.list.AssignmentList;
 
 import java.io.IOException;
 

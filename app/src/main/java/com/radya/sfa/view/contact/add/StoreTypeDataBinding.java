@@ -1,8 +1,7 @@
 package com.radya.sfa.view.contact.add;
 
-import android.databinding.BaseObservable;
 
-import com.google.gson.annotations.SerializedName;
+import androidx.databinding.BaseObservable;
 
 public class StoreTypeDataBinding extends BaseObservable {
 

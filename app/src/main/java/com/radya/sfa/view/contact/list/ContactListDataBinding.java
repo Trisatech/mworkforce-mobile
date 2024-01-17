@@ -1,11 +1,8 @@
 package com.radya.sfa.view.contact.list;
 
-import android.databinding.BaseObservable;
-import android.databinding.BindingAdapter;
-import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
+import androidx.databinding.BaseObservable;
+
 import com.radya.sfa.view.contact.Contact;
 
 public class ContactListDataBinding extends BaseObservable {

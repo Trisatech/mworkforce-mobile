@@ -1,11 +1,10 @@
 package com.radya.sfa.view.dashboard;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MediatorLiveData;
-import android.arch.lifecycle.ViewModel;
 
-import com.google.android.gms.maps.model.Dash;
-import com.google.gson.JsonObject;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
+import androidx.lifecycle.ViewModel;
+
 import com.radya.sfa.Constant;
 import com.radya.sfa.data.source.remote.ApiRequest;
 import com.radya.sfa.data.source.remote.ApiResponse;

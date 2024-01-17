@@ -1,18 +1,19 @@
 package com.radya.sfa.view.news;
 
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.viewpager.widget.ViewPager;
 
 import com.radya.sfa.Constant;
 import com.radya.sfa.R;
@@ -87,7 +88,7 @@ public class NewsFragment extends Fragment {
         progressLoading.setVisibility(View.VISIBLE);
 
         viewModel.getNewsList(NetworkUtils.getConnectionManager(), 0);
-        viewModel.getNewsListResponse().observe(this, new Observer<ApiResponse>() {
+        viewModel.getNewsListResponse().observe(getViewLifecycleOwner(), new Observer<ApiResponse>() {
             @Override
             public void onChanged(@Nullable ApiResponse apiResponse) {
 

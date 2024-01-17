@@ -1,11 +1,12 @@
 package com.radya.sfa.view.invoice.payment;
 
-import android.databinding.BaseObservable;
+
+import androidx.databinding.BaseObservable;
 
 import com.radya.sfa.util.AppUtils;
 import com.radya.sfa.util.StringUtils;
 
-public class InvoicePaymentDataBinding extends BaseObservable{
+public class InvoicePaymentDataBinding extends BaseObservable {
 
     private InvoicePayment data;
 

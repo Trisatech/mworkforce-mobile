@@ -1,9 +1,7 @@
 package com.radya.sfa.view.assignment.act;
 
-import android.databinding.BaseObservable;
 
-import com.radya.sfa.util.StringUtils;
-import com.radya.sfa.view.invoice.Invoice;
+import androidx.databinding.BaseObservable;
 
 public class AssignmentActDataBinding extends BaseObservable {
 

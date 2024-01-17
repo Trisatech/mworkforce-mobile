@@ -1,6 +1,7 @@
 package com.radya.sfa.data.source.remote;
 
-import android.arch.lifecycle.LiveData;
+
+import androidx.lifecycle.LiveData;
 
 /**
  * Created by Devin on 9/6/16.

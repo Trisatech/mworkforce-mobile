@@ -1,16 +1,14 @@
 package com.radya.sfa.view.home;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MediatorLiveData;
-import android.arch.lifecycle.ViewModel;
 
-import com.google.gson.JsonObject;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
+import androidx.lifecycle.ViewModel;
+
 import com.radya.sfa.data.source.remote.ApiRequest;
 import com.radya.sfa.data.source.remote.ApiResponse;
-import com.radya.sfa.data.source.remote.BaseModel;
 import com.radya.sfa.data.source.remote.ConnectionCallback;
 import com.radya.sfa.data.source.remote.ConnectionManager;
-import com.radya.sfa.view.agent.AgentList;
 import com.radya.sfa.view.dashboard.Attendance;
 
 import retrofit2.Call;

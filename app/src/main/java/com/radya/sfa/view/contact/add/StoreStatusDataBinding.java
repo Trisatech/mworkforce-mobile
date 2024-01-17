@@ -1,6 +1,7 @@
 package com.radya.sfa.view.contact.add;
 
-import android.databinding.BaseObservable;
+
+import androidx.databinding.BaseObservable;
 
 public class StoreStatusDataBinding extends BaseObservable {
 

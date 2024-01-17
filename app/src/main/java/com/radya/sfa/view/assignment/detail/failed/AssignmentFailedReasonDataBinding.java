@@ -1,6 +1,7 @@
 package com.radya.sfa.view.assignment.detail.failed;
 
-import android.databinding.BaseObservable;
+
+import androidx.databinding.BaseObservable;
 
 public class AssignmentFailedReasonDataBinding extends BaseObservable {
 

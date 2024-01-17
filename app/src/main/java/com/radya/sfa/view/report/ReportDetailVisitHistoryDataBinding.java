@@ -1,6 +1,7 @@
 package com.radya.sfa.view.report;
 
-import android.databinding.BaseObservable;
+
+import androidx.databinding.BaseObservable;
 
 import com.radya.sfa.Constant;
 import com.radya.sfa.util.DateUtils;

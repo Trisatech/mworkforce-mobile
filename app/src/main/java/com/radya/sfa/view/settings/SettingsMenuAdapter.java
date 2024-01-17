@@ -1,17 +1,16 @@
 package com.radya.sfa.view.settings;
 
-import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.radya.sfa.BR;
 import com.radya.sfa.R;
 import com.radya.sfa.view.GenericViewHolder;
-import com.radya.sfa.view.sidemenu.SideMenu;
-import com.radya.sfa.view.sidemenu.SideMenuDataBinding;
 
 import java.util.ArrayList;
 import java.util.List;

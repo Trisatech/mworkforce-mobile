@@ -1,8 +1,9 @@
 package com.radya.sfa.view.settings;
 
-import android.databinding.BaseObservable;
-import android.databinding.BindingAdapter;
 import android.widget.ImageView;
+
+import androidx.databinding.BaseObservable;
+import androidx.databinding.BindingAdapter;
 
 import com.bumptech.glide.Glide;
 import com.radya.sfa.view.sidemenu.SideMenu;
