@@ -2,11 +2,10 @@ package com.radya.sfa.view.assignment.product;
 
 //http://stackoverflow.com/questions/26585941/recyclerview-header-and-footer
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Point;
-import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +16,8 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.radya.sfa.Constant;
@@ -62,7 +63,7 @@ public class AssignmentProductAdapter extends RecyclerView.Adapter<AssignmentPro
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder holder, final int position) {
+    public void onBindViewHolder(final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         final AssignmentProduct.Product item = data.get(position);
         holder.position = position;
 

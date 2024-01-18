@@ -1,6 +1,7 @@
 package com.radya.sfa.data.source.remote.service;
 
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.google.gson.JsonObject;
 import com.radya.sfa.Constant;

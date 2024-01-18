@@ -3,8 +3,6 @@ package com.radya.sfa.view.home;
 import android.Manifest;
 import android.app.Activity;
 import android.app.DatePickerDialog;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -14,18 +12,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.provider.Settings;
-import android.support.annotation.Nullable;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.FileProvider;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.DatePicker;
@@ -34,6 +20,20 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.navigation.NavigationView;
 import com.radya.sfa.BuildConfig;
 import com.radya.sfa.Constant;
 import com.radya.sfa.MyApplication;
@@ -82,6 +82,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import id.zelory.compressor.Compressor;
+import kotlinx.coroutines.Dispatchers;
 
 /**
  * Created by aderifaldi on 2018-03-24.
@@ -439,6 +440,7 @@ public class HomeActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         AlertUtils alertUtils = new AlertUtils(HomeActivity.this);
         alertUtils.showAlert(getString(R.string.alertMessageConfirmExit), new AlertUtils.negativeButton() {
             @Override
@@ -473,6 +475,7 @@ public class HomeActivity extends BaseActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == Constant.Permission.CAMERA) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED
                     && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
@@ -546,7 +549,7 @@ public class HomeActivity extends BaseActivity {
         LoadImage loadImage = new LoadImage(fileTemp, getApplicationContext(), new LoadImage.ImageFinishLoad() {
             @Override
             public void onImageFinishLoad(Bitmap bitmap) {
-                file = Compressor.getDefault(getApplicationContext()).compressToFile(fileTemp);
+                file = fileTemp;
                 rotateImage(file, bitmap);
             }
         }, width, true);

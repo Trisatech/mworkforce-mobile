@@ -104,7 +104,7 @@ public class Constant {
         public static final int TIMEOUT = 1;
 
         public static final String DEVELOPMENT = "http://salesmapapp.azurewebsites.net/api/";
-        public static final String DEVELOPMENT_2 = "http://103.82.240.199:9001/api/";
+        public static final String DEVELOPMENT_2 = "https://api-aru.azurewebsites.net/api/";
         public static final String PRODUCTION = "http://mobiforce.azurewebsites.net/api/";
         public static final String PRODUCTION_2 = "https://qionsalesforce.azurewebsites.net/api/";
 

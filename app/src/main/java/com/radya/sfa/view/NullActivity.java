@@ -1,12 +1,13 @@
 package com.radya.sfa.view;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 
 import com.radya.sfa.R;
 import com.radya.sfa.util.IntentUtils;

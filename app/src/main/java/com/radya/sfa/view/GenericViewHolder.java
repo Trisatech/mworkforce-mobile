@@ -1,9 +1,10 @@
 package com.radya.sfa.view;
 
-import android.databinding.ViewDataBinding;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.AdapterView;
+
+import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by aderifaldi on 2018-01-04.

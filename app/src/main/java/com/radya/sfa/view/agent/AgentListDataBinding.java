@@ -1,6 +1,6 @@
 package com.radya.sfa.view.agent;
 
-import android.databinding.BaseObservable;
+import androidx.databinding.BaseObservable;
 
 public class AgentListDataBinding extends BaseObservable {
 

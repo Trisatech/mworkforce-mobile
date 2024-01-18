@@ -1,6 +1,6 @@
 package com.radya.sfa.view.invoice.master;
 
-import android.databinding.BaseObservable;
+import androidx.databinding.BaseObservable;
 
 public class InvoiceBankDataBinding extends BaseObservable {
 

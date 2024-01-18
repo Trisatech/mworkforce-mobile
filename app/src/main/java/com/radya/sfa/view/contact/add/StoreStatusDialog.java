@@ -3,16 +3,17 @@ package com.radya.sfa.view.contact.add;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.radya.sfa.R;
 import com.radya.sfa.view.ListView;
@@ -85,15 +86,12 @@ public class StoreStatusDialog extends DialogFragment implements ListView{
         listPaymentMethod.setAdapter(adapter);
         listPaymentMethod.setLayoutManager(linearLayoutManager);
 
-        adapter.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                StoreStatus item = adapter.getData().get(i);
+        adapter.setOnItemClickListener((adapterView, view, i, l) -> {
+            StoreStatus item = adapter.getData().get(i);
 
-                ((ContactAddActivity) getActivity()).setStatus(item.getStatus_name());
+            ((ContactAddActivity) getActivity()).setStatus(item.getStatus_name());
 
-                getDialog().dismiss();
-            }
+            getDialog().dismiss();
         });
 
         loadData();

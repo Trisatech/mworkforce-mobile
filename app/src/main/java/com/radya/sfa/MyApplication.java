@@ -2,9 +2,10 @@ package com.radya.sfa;
 
 import android.app.Activity;
 import android.app.Application;
-import android.arch.lifecycle.ViewModelProviders;
 import android.location.Location;
-import android.support.v4.app.FragmentActivity;
+
+import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.radya.sfa.data.AppDatabase;
 import com.radya.sfa.data.source.preference.PrefManager;

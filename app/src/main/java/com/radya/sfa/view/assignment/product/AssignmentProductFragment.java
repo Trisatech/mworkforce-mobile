@@ -1,18 +1,19 @@
 package com.radya.sfa.view.assignment.product;
 
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -88,7 +89,7 @@ public class AssignmentProductFragment extends Fragment {
     private void getProduct() {
         progressLoading.setVisibility(View.VISIBLE);
         viewModel.assignmentProductList(NetworkUtils.getConnectionManager());
-        viewModel.getAsignmentProductResponse().observe(this, new Observer<ApiResponse>() {
+        viewModel.getAsignmentProductResponse().observe(getViewLifecycleOwner(), new Observer<ApiResponse>() {
             @Override
             public void onChanged(@Nullable ApiResponse apiResponse) {
                 progressLoading.setVisibility(View.GONE);
@@ -153,24 +154,21 @@ public class AssignmentProductFragment extends Fragment {
         jsonObject.add("products", jsonArray);
 
         viewModel.assignmentProductOrder(NetworkUtils.getConnectionManager(), jsonObject);
-        viewModel.getAssignmentProductOrderResponse().observe(this, new Observer<ApiResponse>() {
-            @Override
-            public void onChanged(@Nullable ApiResponse apiResponse) {
-                progressLoading.setVisibility(View.GONE);
+        viewModel.getAssignmentProductOrderResponse().observe(this, apiResponse -> {
+            progressLoading.setVisibility(View.GONE);
 
-                BaseModel response = (BaseModel) apiResponse.getData();
+            BaseModel response = (BaseModel) apiResponse.getData();
 
-                if (response != null){
-                    ToastUtils.showToast(response.getAlert().getMessage());
-                    ((AssignmentProductActivity)getActivity()).back();
-                }else {
-                    SyncManager.storeSync(MyApplication.obtainLocalDB(),
-                            assignmentDetail.getAssignmentId(),
-                            Constant.SyncType.ORDER, jsonObject.toString(),
-                            0);
-                }
-
+            if (response != null){
+                ToastUtils.showToast(response.getAlert().getMessage());
+                ((AssignmentProductActivity)getActivity()).back();
+            }else {
+                SyncManager.storeSync(MyApplication.obtainLocalDB(),
+                        assignmentDetail.getAssignmentId(),
+                        Constant.SyncType.ORDER, jsonObject.toString(),
+                        0);
             }
+
         });
 
     }

@@ -5,7 +5,7 @@
     android:background="@color/colorWhite"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listTaskOnProgress"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
