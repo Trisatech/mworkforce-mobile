@@ -9,8 +9,7 @@ android {
     defaultConfig {
         applicationId 'com.radya.sfa'
         minSdkVersion 24
-        targetSdkVersion 33
-        multiDexEnabled true
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -93,7 +92,6 @@ ext {
     calendarViewVersion = '2.0.2.2'
     googleServiceVersion = '15.0.1'
     imageCompressorVersion = '3.0.1'
-    workManagerVersion = '1.0.0-alpha06'
     circleIndicatorVersion = '1.2.2@aar'
     firebaseCoreVersion = '16.0.1'
     firebaseMessagingVersion = '17.3.0'
@@ -111,13 +109,12 @@ dependencies {
     implementation "androidx.appcompat:appcompat-resources:$appcompat_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraingLayoutVersion"
 //    implementation "com.android.support:support-v4:$supportLibraryVersion"
-    implementation 'com.google.android.material:material:1.11.0-beta01'
+    implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation "androidx.recyclerview:recyclerview:1.3.2"
     // For control over item selection of both touch and mouse driven selection
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation "androidx.multidex:multidex:2.0.1"
+    implementation 'androidx.core:core-ktx:1.12.0'
 
     //CIRCLE INDICATOR
     implementation "me.relex:circleindicator:$circleIndicatorVersion"
@@ -126,10 +123,9 @@ dependencies {
     implementation "android.arch.lifecycle:runtime:$archLifecycleVersion"
     implementation "android.arch.lifecycle:extensions:$archLifecycleVersion"
     implementation 'com.google.android.gms:play-services-maps:18.2.0'
-    annotationProcessor "android.arch.lifecycle:compiler:$archLifecycleVersion"
 
     //RETROFIT
-    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.squareup.okhttp3:okhttp:3.10.0"
     implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
@@ -140,7 +136,7 @@ dependencies {
     compileOnly "org.glassfish:javax.annotation:$glassfishVersion"
 
     //GLIDE
-    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    implementation "com.github.bumptech.glide:glide:4.15.1"
     annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
 
     //BUTTER KNIFE
@@ -148,29 +144,29 @@ dependencies {
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
 
     //ROOM
-    implementation "android.arch.persistence.room:runtime:$roomVersion"
-    annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
+    implementation "androidx.room:room-runtime:2.6.1"
+    annotationProcessor "androidx.room:room-compiler:2.6.1"
 
     //CALENDAR VIEW
     implementation "com.github.sundeepk:compact-calendar-view:$calendarViewVersion"
 
     //GOOGLE SERVICE
-    implementation "com.google.android.gms:play-services-location:$googleServiceVersion"
+    implementation "com.google.android.gms:play-services-location:21.0.1"
 
     //IMAGE COMPRESSOR
     implementation "id.zelory:compressor:$imageCompressorVersion"
 
     //WORK MANAGER
-    implementation "android.arch.work:work-runtime:$workManagerVersion"
+    implementation "androidx.work:work-runtime:2.9.0"
 
     //CIRCLE INDICATOR
     implementation "me.relex:circleindicator:$circleIndicatorVersion"
 
     //FIREBASE
     //CORE
-    implementation "com.google.firebase:firebase-core:$firebaseCoreVersion"
+    implementation "com.google.firebase:firebase-core:21.1.1"
     //MESSAGING
-    implementation "com.google.firebase:firebase-messaging:$firebaseMessagingVersion"
+    implementation "com.google.firebase:firebase-messaging:23.4.0"
 
     testImplementation "junit:junit:$jUnitVersion"
     androidTestImplementation "com.android.support.test:runner:$testUnitVersion"
